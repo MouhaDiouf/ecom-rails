@@ -1,7 +1,7 @@
 
 <% if notice %>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <%= notice %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -25,7 +25,7 @@
 
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to "Vendre", '/produits/créer', class: 'nav-link'  %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,13 +59,3 @@
     </form>
   </div>
 </nav>
-
-<div class="jumbotron mt-40">
-  <h1 class="display-4">Bienvenue!</h1>
-  <p class="lead">Dieunde est la plateforme de vente en ligne au Sénégal</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
-  </p>
-</div>
