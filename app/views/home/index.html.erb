@@ -9,18 +9,24 @@
   </p>
 </div>
 <h2>Produits</h2>
-<div class="produits">
-
+<div class="produits container">
+<div class="row">
 
   <% @produits.each do |produit| %>
-  <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card produit" style="width: 18rem;">
+  <!-- <img class="card-img-top" src="..." alt=<%= produit.nom %>> -->
+  <% produit.images.each do |file| %>
+    <%= image_tag(rails_blob_path(file, disposition: :inline), class: "card-img-top") %>
+  <% end %>
+
   <div class="card-body">
     <h5 class="card-title"><%= produit.nom %></h5>
     <p class="card-text"><%= produit.description %></p>
     <p class="card-text"><%= produit.prix %> cfa</p>
+
     <a href="#" class="btn btn-primary">Voir</a>
   </div>
 </div>
   <% end %>
+  </div>
 </div>
