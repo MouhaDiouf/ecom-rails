@@ -1,0 +1,18 @@
+
+<div class="page-produit container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <% @produit.images.each do |image| %>
+    <%= image_tag(image, class:'image-produit')%>
+  <% end %>
+    </div>
+    <div class="col-md-6">
+      <h2>Détails pour <%= @produit.nom %></h2>
+<p><%=@produit.description %></p>
+<div class="détails-vendeur">
+  <h3>Détails Vendeur</h3>
+  <%= @produit.user.email %>
+</div>
+    </div>
+  </div>
+</div>

@@ -3,9 +3,8 @@
 <%= form_for(@produit) do |form| %>
 
 <% if @produit.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@produit.errors.count, "erreur") %> on empêché la création de votre produit:</h2>
-
+  <div id="error_explanation" class="alert alert-success" role="alert">
+    <h3 class="alert-heading"><%= pluralize(@produit.errors.count, "erreur") %> on empêché la création de votre produit:</h3>
     <ul>
       <% @produit.errors.full_messages.each do |message| %>
         <li><%= message %></li>

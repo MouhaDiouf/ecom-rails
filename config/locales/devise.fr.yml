@@ -4,11 +4,26 @@
 #########################################################################################################
 
 fr:
+  activerecord:
+    errors:
+      models:
+        produit:
+          attributes:
+            nom:
+              blank: ": merci de donner le nom du produit"
+            description:
+              blank: ": merci de fournir une description du produit"
+            prix:
+              blank: ": renseigner le prix de votre produit"
+            images:
+              blank: ":veuillez fournir des images de ce que vous vendez"
+
   errors:
     messages:
       not_found: "n'a pas été trouvé(e)"
       already_confirmed: "a déjà été confirmé(e)"
       not_locked: "n'était pas verrouillé(e)"
+
 
   devise:
     failure:
