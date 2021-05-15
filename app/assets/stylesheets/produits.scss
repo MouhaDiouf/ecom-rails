@@ -1,6 +1,23 @@
 // Place all the styles related to the Produits controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.card {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.card.produit {
+  flex-direction: row;
+}
 .image-produit {
   width: 100%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.page-produit {
+  background: lightgray;
+  padding: 50px;
 }

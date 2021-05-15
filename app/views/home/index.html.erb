@@ -12,23 +12,20 @@
 </div>
 <h2 class="text-center">Produits</h2>
 <div class="produits container">
-<div class="row">
 
   <% @produits.each do |produit| %>
   <div class="card produit">
-    <div class="card-image  col-md-4">
+    <div class="col-md-3">
       <%= (image_tag produit.images.first, class: 'card-img-top') if produit.images.attached? %>
     </div>
 
-  <div class="card-body col-md-5">
+  <div class="card-body col-md-8 offset-1">
     <h5 class="card-title"><%= produit.nom %></h5>
     <p class="card-text"><%= produit.description %></p>
     <p class="card-text"><%= produit.prix %> cfa</p>
-    <span class="badge bg-secondary"><%=produit.catégorie %></span>
-
+    <p class="badge bg-secondary"><%=produit.catégorie %></p> <br/>
     <%= link_to "Voir", produit_path(produit), class:"btn btn-primary" %>
   </div>
 </div>
   <% end %>
-  </div>
 </div>
