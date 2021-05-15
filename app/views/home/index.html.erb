@@ -21,7 +21,7 @@
 
   <div class="card-body col-md-8 offset-1">
     <h5 class="card-title"><%= produit.nom %></h5>
-    <p class="card-text"><%= produit.description %></p>
+    <p class="card-text"><%= produit.description.truncate(100, separator: /\s/) if produit.description?%></p>
     <p class="card-text"><%= produit.prix %> cfa</p>
     <p class="badge bg-secondary"><%=produit.catégorie %></p> <br/>
     <%= link_to "Voir", produit_path(produit), class:"btn btn-primary" %>

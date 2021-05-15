@@ -16,6 +16,7 @@ end
 
 def show
   @produit = Produit.find(params[:id])
+  @similaires = Produit.similaires(@produit)
 
 end
 

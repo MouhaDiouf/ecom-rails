@@ -12,4 +12,10 @@ class Produit < ApplicationRecord
   def acceptable_image
     return unless images.attached?
   end
+
+
+  def self.similaires(produit)
+  where("nom LIKE ?", "#{produit.nom}%").limit(4)
+end
+
 end
