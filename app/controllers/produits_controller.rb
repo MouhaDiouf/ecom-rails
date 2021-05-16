@@ -11,7 +11,9 @@ def new
 end
 
 def index
-@produits = Produit.all
+  # debugger
+@produits = Produit.search(params[:recherche])
+render 'home/index'
 end
 
 def show
@@ -33,6 +35,8 @@ end
 
 end
 private
+
+
 
 def produit_params
 params.require(:produit).permit(:nom, :description, :catégorie, :prix, images: [])
