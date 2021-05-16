@@ -39,7 +39,7 @@ private
 
 
 def produit_params
-params.require(:produit).permit(:nom, :description, :catégorie, :prix, images: [])
+params.require(:produit).permit(:nom, :description, :catégorie, :prix, :recherche, images: [])
 end
 
 end

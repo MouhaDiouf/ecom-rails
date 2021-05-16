@@ -7,11 +7,10 @@ class Produit < ApplicationRecord
   validates :prix, presence: true
   validates :catégorie, presence: true
   validates :images, presence: true
-
+  
   def acceptable_image
     return unless images.attached?
   end
-
 
   def self.similaires(produit)
     where("nom LIKE ?", "#{produit.nom}%").limit(4)
