@@ -7,7 +7,11 @@ class Produit < ApplicationRecord
   validates :prix, presence: true
   validates :catégorie, presence: true
   validates :images, presence: true
-  
+
+  default_scope { order('created_at DESC') }
+
+
+
   def acceptable_image
     return unless images.attached?
   end
