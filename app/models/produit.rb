@@ -8,9 +8,10 @@ class Produit < ApplicationRecord
   validates :catégorie, presence: true
   validates :images, presence: true
 
+
+  scope :confirmé, -> { where("confirm IS false") }
   default_scope { order('created_at DESC') }
-
-
+  # default_scope {}
 
   def acceptable_image
     return unless images.attached?

@@ -1,0 +1,10 @@
+<h1>Admin Page</h1>
+
+<h2>Produits</h2>
+
+<% @produits.each do |produit| %>
+<%= produit.nom %>
+<%= produit.description %>
+<button type="button" name="button">Confirm</button>
+
+<% end %>

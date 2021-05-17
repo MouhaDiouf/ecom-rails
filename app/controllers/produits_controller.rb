@@ -11,12 +11,11 @@ def new
 end
 
 def index
-  # debugger
-@produits = Produit.search(params[:recherche])
-render 'home/index'
+@produits = Produit.confirmé.search(params[:recherche])
+render root_path
 end
 
-def show
+def shows
   @produit = Produit.find(params[:id])
   @similaires = Produit.similaires(@produit)
 
