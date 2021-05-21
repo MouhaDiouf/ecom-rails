@@ -15,7 +15,7 @@ def index
 render root_path
 end
 
-def shows
+def show
   @produit = Produit.find(params[:id])
   @similaires = Produit.similaires(@produit)
 

@@ -2,9 +2,12 @@
 
 <h2>Produits</h2>
 
-<% @produits.each do |produit| %>
+<% @produits.each do |produit|%>
+<div class="container">
+
 <%= produit.nom %>
 <%= produit.description %>
-<button type="button" name="button">Confirm</button>
+<%= button_to "Confirmer", class: "btn-primary", method: 'post' %>
+</div>
 
 <% end %>
